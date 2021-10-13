@@ -1,0 +1,45 @@
+{
+  "name": "pract2_santana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "style": "gulp styles",
+    "tsc": "gulp scripts",
+    "scripts:watch": "gulp scripts:watch",
+    "styles:watch": "gulp styles:watch",
+    "serve": "gulp serve",
+    "build": "gulp",
+    "dev": "cross-env NODE_ENV=dev nodemon .",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CluadiaSantana/Pract1_Santana.git"
+  },
+  "author": "Claudia Santana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CluadiaSantana/Pract1_Santana/issues"
+  },
+  "homepage": "https://github.com/CluadiaSantana/Pract1_Santana#readme",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "handlebars": "^4.7.7",
+    "node-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.4",
+    "cross-env": "^7.0.3",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "nodemon": "^2.0.13",
+    "sass": "^1.42.1",
+    "typescript": "^4.4.3"
+  }
+}

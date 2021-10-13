@@ -1,0 +1,83 @@
+@import 'variables';
+
+*{
+    background-color: $Secondarycolor;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.image{
+    width: 80%;
+    height: auto;
+    display:block;
+    margin:auto;
+    margin-top: 5%;
+}
+.titletext{
+    color:$Primarycolor;
+}
+.backbackPrimary{
+    background-color: $Primarycolor;
+}
+
+.form-control{
+    width: 100%;
+    height: 2rem;
+    border-radius: 10px;
+}
+
+section{
+   padding-left: $Paddingsides;
+   padding-right: $Paddingsides;
+}
+
+button{
+    background-color: rgba(0, 0, 255, 0.788);
+    height: 2.3rem;
+    width: 100%;
+    color: $Primarycolor;
+    border-radius: 11px;
+    text-align:center;
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}
+#linknews{
+    color: lightblue;
+}
+.newsformat{
+    background-color: $Primarycolor;
+    font-size: 15px ;
+}
+#news{
+    width: 100%;
+    padding: 25px;
+    
+}
+.news-item{
+    @extend .newsformat;
+    margin:5%;
+    padding-bottom: 10px;
+}
+h2{
+    @extend .news-item;
+    
+}
+
+p{
+    @extend .news-item;
+    
+}
+
+.vermas{
+    @extend .news-item;
+    background-color: blue;
+    color:$Primarycolor;
+    padding: 1%;
+    height: auto;
+    
+}

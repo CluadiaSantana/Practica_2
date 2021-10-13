@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITESO NEWS APP</title>
+    <link rel="stylesheet" src="/../../styles/styles.css">
+    <style>
+        * {
+  background-color: black;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.image {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.titletext {
+  color: white;
+}
+
+.backbackPrimary {
+  background-color: white;
+}
+
+.form-control {
+  width: 100%;
+  height: 2rem;
+  border-radius: 10px;
+}
+
+section {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#button-search {
+  background-color: rgba(0, 0, 255, 0.788);
+  height: 2.3rem;
+  width: 100%;
+  color: white;
+  border-radius: 11px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#linknews {
+  color: lightblue;
+}
+
+.newsformat, .news-item, .vermas, p, h2 {
+  background-color: white;
+  font-size: 15px;
+}
+
+#news {
+  width: 100%;
+  padding: 25px;
+}
+
+.news-item, .vermas, p, h2 {
+  margin: 5%;
+  padding-bottom: 10px;
+}
+
+.vermas {
+  background-color: blue;
+  color: white;
+  padding: 1%;
+  height: auto;
+}
+
+.foo {
+  position: absolute;
+  top: 0;
+}
+
+.grid > div[class*=col-] {
+  float: left;
+  min-height: 1px;
+  margin: 0.5%;
+}
+.grid > .col-12 {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .grid > .col-md-1 {
+    width: 7.9166666667%;
+    height: 500px;
+  }
+  .grid > .col-md-2 {
+    width: 15.8333333333%;
+    height: 500px;
+  }
+  .grid > .col-md-3 {
+    width: 23.75%;
+    height: 500px;
+  }
+  .grid > .col-md-4 {
+    width: 31.6666666667%;
+    height: 500px;
+  }
+  .grid > .col-md-6 {
+    width: 47.5%;
+    height: 500px;
+  }
+  .grid > .col-md-8 {
+    width: 63.3333333333%;
+    height: 500px;
+  }
+  .grid > .col-md-9 {
+    width: 71.25%;
+    height: 500px;
+  }
+  .grid > .col-md-12 {
+    width: 95%;
+    height: 500px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid > .col-lg-1 {
+    width: 7.9166666667%;
+    height: 500px;
+  }
+  .grid > .col-lg-2 {
+    width: 15.8333333333%;
+    height: 500px;
+  }
+  .grid > .col-lg-3 {
+    width: 23.75%;
+    height: 500px;
+  }
+  .grid > .col-lg-4 {
+    width: 31.6666666667%;
+    height: 500px;
+  }
+  .grid > .col-lg-6 {
+    width: 47.5%;
+    height: 500px;
+  }
+  .grid > .col-lg-8 {
+    width: 63.3333333333%;
+    height: 500px;
+  }
+  .grid > .col-lg-9 {
+    width: 71.25%;
+    height: 500px;
+  }
+  .grid > .col-lg-12 {
+    width: 95%;
+    height: 500px;
+  }
+}
+    </style>
+</head>
+<body>
+<section>
+    <h1 class="titletext">ITESO News App</h1>
+    <form >
+        <div >
+            <label for="searchbar"></label>
+            <input id="searchbar" class="form-control backbackPrimary" placeholder="SEARCH">
+            <a id="button-search" class="buttom" onclick="window.location='http://localhost:3001/'+world.value">BUSCAR</a>
+        </div>
+    </form>
+    <h5 class="titletext">This project depends on <a class="nav-link" id="linknews" href="https://newsapi.org/" target="_blank"> News Api </a> a simple 
+        HTTP REST API for searching and retreiveing live articles from all over the web </h5>
+</section>
+<div id="news" class="grid " >
+    {{#each news}}
+    <div class="news-item col-12 col-md-6 col-lg-3">
+        <img src="{{ urlToImage}}" class="image"/>
+        <h2>{{ title}}</h2>
+        <p>{{ description}}</p>
+        <a href="{{ url}}" target="_blank" class="vermas">Ver más</a>
+    </div>
+    {{/each}}
+</div>
+</body>
+<script >
+  let world=document.querySelector("#searchbar");
+  function search(){
+    console.log(world.value)
+    
+  }
+</script>
+</html>
