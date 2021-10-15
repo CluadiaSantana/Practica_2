@@ -44,7 +44,7 @@ section {
   padding-right: 25px;
 }
 
-#button-search {
+.buttom {
   background-color: rgba(0, 0, 255, 0.788);
   height: 2.3rem;
   width: 100%;
@@ -171,9 +171,8 @@ section {
     <h1 class="titletext">ITESO News App</h1>
     <form >
         <div >
-            <label for="searchbar"></label>
-            <input id="searchbar" class="form-control backbackPrimary" placeholder="SEARCH">
-            <a id="button-search" class="buttom" onclick="window.location='http://localhost:3001/'+world.value">BUSCAR</a>
+            <input type="text" name="usuario" />
+            <button type="submit">Enviar formulario</button>
         </div>
     </form>
     <h5 class="titletext">This project depends on <a class="nav-link" id="linknews" href="https://newsapi.org/" target="_blank"> News Api </a> a simple 
